@@ -1,0 +1,12 @@
+<div *ngIf="!isLoading" class="main-container" >
+<div *ngFor="let planet of planets">
+  <app-new-card
+  [planet] = 'planet'></app-new-card>
+</div>
+</div>
+<app-pagination *ngIf="!isLoading"
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (pageChange)="loadPlanetDetails($event)">
+</app-pagination>
+<app-loader *ngIf="isLoading"></app-loader>

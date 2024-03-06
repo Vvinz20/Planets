@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="content" [ngClass]="{'content': toggle, 'content-rotate': !toggle}">
+    <div class="back">
+      <div class="back-content">
+        <span class="heading">{{ planet.name }}</span>
+  <span>Rotation Period:  {{ planet.rotation_period }}</span>
+  <span>Orbital Period: {{ planet.orbital_period }}</span> 
+  <span>Climate: {{ planet.climate }}</span> 
+  <span>Terrain: {{ planet.terrain }}</span> 
+  <span>Population: {{ planet.population }}</span> 
+
+  <button class="btn" (click)="onToggleCard()" type="button">
+    <strong>Residents</strong>
+  </button>
+
+  
+   
+      </div>
+    </div>
+    <div class="front">
+        <button class="btn" (click)="onToggleCard()" type="button">
+            <strong>Back</strong>
+          </button>
+    <ng-container *ngIf="residentsData?.length !==0; else noResident">
+      <div *ngFor="let resident of residentsData ">
+        <span>{{resident.name}}</span></div>
+    </ng-container>
+    </div>
+  </div>
+</div>
+<ng-template #noResident>
+    <span class="no-resident">Oops!! No one's home</span>
+</ng-template>
