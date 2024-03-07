@@ -1,3 +1,12 @@
+# Clone Angular repo
+git clone https://github.com/Vvinz20/Planets.git
+
+# setting up local
+
+Open the project in IDE.
+Open Terminal-> cd star-wars.
+Run 'npm i' to install all dependencies.
+
 # StarWars
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
