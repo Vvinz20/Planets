@@ -21,15 +21,7 @@
       <span class="front-heading">Residents</span>
       <div class="front-content">
       <div class="names-list" *ngFor="let resident of residentsData ">
-        <span class="name-card" (mouseover)="showTooltip($event, resident)" (mouseout)="hideTooltip()">{{resident.name}}</span>
-        <div class="tooltip" [style.display]="tooltipVisible ? 'block' : 'none'" [style.left]="tooltipLeft" [style.top]="tooltipTop">
-          <span>Name : {{ tooltipContent?.name }}</span>
-          <span>Gender : {{ tooltipContent?.gender }}</span>
-          <span>Height : {{ tooltipContent?.height }}</span>
-          <span>Birth_year :{{ tooltipContent?.birth_year }}</span>
-          <span>hair_color :{{ tooltipContent?.hair_color }}</span>
-          <span>skin_color :{{ tooltipContent?.skin_color }}</span>
-        </div>
+        <span class="name-card">{{resident.name}}</span>
       </div>
     </div>
     </ng-container>

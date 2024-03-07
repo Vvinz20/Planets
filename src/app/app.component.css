@@ -1,3 +1,20 @@
 .main-class{
     display: flex;
 }
+
+.header {
+    background-color: #0b3d91; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .title {
+    font-family: 'Star Jedi', sans-serif; 
+    color: #ffffff; 
+    text-decoration: underline;
+    letter-spacing: 4px;
+    margin: 0;
+  }
+  
+  
