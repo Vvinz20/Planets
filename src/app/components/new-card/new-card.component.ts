@@ -15,6 +15,11 @@ export class NewCardComponent implements OnInit {
   toggle= true;
   residentsData!: any[];
 
+  tooltipVisible: boolean = false;
+  tooltipContent: any
+  tooltipLeft: string = '';
+  tooltipTop: string = '';
+
   constructor(private planetService: PlanetService) { }
 
   ngOnInit(): void {
@@ -37,6 +42,18 @@ export class NewCardComponent implements OnInit {
     } else {
       this.residentsData = []
     }
+  }
+
+  showTooltip(event: MouseEvent, resident: any): void {
+    this.tooltipContent = resident
+    this.tooltipVisible = true;
+    this.tooltipLeft = event.pageX + 'px';
+    this.tooltipTop = event.pageY + 'px';
+    
+  }
+
+  hideTooltip(): void {
+    this.tooltipVisible = false;
   }
 
 }

@@ -139,10 +139,66 @@ button {
 
   .no-resident{
     position: fixed;
-    top: 110px;
-    right: 40px;
+    top: 120px;
+    right: 60px;
     color: #3b82de;
     font-size: 20px;
     font-weight: 500;
   }
+
+.names-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  height: fit-content;
+  
+}
+
+.name-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  min-width: 120px; 
+  max-width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.name-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.front-heading{
+  position: relative;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: #3b82de;
+  padding: 20px;
+  
+}
+
+.front-content{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+    height: 180px;
+}
+.tooltip {
+  display: none;
+  position: fixed; 
+  background-color: #f0f0f0; 
+  color: #333;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 9999; 
+}
+
+
   
