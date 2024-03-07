@@ -14,6 +14,7 @@ export class NewCardComponent implements OnInit {
 
   toggle= true;
   residentsData!: any[];
+  isLoading: boolean = true
 
 
   constructor(private planetService: PlanetService) { }
@@ -34,9 +35,11 @@ export class NewCardComponent implements OnInit {
       const requests = this.planetService.getResidents(this.planet.residents);
       forkJoin(requests).subscribe(data => {
         this.residentsData= data
+        this.isLoading = false
       });
     } else {
       this.residentsData = []
+      this.isLoading = false
     }
   }
 

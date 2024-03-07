@@ -19,7 +19,14 @@
           </button>
     <ng-container *ngIf="residentsData?.length !==0; else noResident">
       <span class="front-heading">Residents</span>
-      <div class="front-content">
+      <section *ngIf="isLoading" class="dots-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </section>
+      <div *ngIf="!isLoading" class="front-content">
       <div class="names-list" *ngFor="let resident of residentsData ">
         <span class="name-card">{{resident.name}}</span>
       </div>
