@@ -1,3 +1,6 @@
+<header *ngIf="!isLoading" class="header">
+  <h1 class="title">STAR WARS PLANETS</h1>
+</header>
 <div *ngIf="!isLoading" class="main-container" >
 <div *ngFor="let planet of planets">
   <app-new-card
