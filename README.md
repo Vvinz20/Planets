@@ -4,7 +4,7 @@ git clone https://github.com/Vvinz20/Planets.git
 # setting up local
 
 Open the project in IDE.
-Open Terminal-> cd star-wars.
+checkout master branch
 Run 'npm i' to install all dependencies.
 
 # StarWars
